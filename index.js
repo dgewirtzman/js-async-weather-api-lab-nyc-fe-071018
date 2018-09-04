@@ -73,8 +73,8 @@ function displayFiveDayForecast(json) {
 function createChart(json) {
   //Bonus: render temperature chart using five day forecast data and ChartJS
   const ctx = document.getElementById('WeatherChart').getContext('2d')
-  const labels = json.list.map((increment) => increment.dt_txt)
-  const data = json.list.map((increment) => increment.main.temp)
+  const labels = json.list.map((increment) => increment.dt_txt) //pulls dt_text data
+  const data = json.list.map((increment) => increment.main.temp) //pulls temp data
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
